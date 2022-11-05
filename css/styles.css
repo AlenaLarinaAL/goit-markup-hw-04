@@ -164,9 +164,19 @@ img {
 /*  hero  */
 .hero {
   background-color: var(--secondary-background-color);
-  background-image: url(../images/hero-bg-img.jpg);
-  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-hero-img.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
   text-align: center;
   letter-spacing: 0.06em;
   padding-top: 200px;
@@ -232,17 +242,28 @@ img {
   display: flex;
   gap: 30px;
 }
-/* .features-list::before {
+.features-list::before {
+  display: block;
   content: "";
-  display: inline-block;
-  width: 270px;
   height: 120px;
   background: var(--secondary-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 4px;
   margin-bottom: 30px;
-  background-image: url(../images/icons.svg#icon-antenna);
-  background-size: contain;
-} */
+}
+.features-list:nth-child(1)::before {
+  background-image: url(../images/icon/antenna.svg);
+}
+.features-list:nth-child(2)::before {
+  background-image: url(../images/icon/clock.svg);
+}
+.features-list:nth-child(3)::before {
+  background-image: url(../images/icon/diagram.svg);
+}
+.features-list:nth-child(4)::before {
+  background-image: url(../images/icon/astronaut.svg);
+}
 .features-list {
   width: 270px;
 }
@@ -356,6 +377,9 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+.footer-group{
+  display: flex;
+}
 .logo-footer {
   display: inline-block;
   margin-bottom: 20px;
@@ -389,6 +413,25 @@ img {
 }
 .footer-nav .item:not(:last-child) {
   margin-bottom: 9px;
+}
+.address{
+  margin-right: 90px;
+}
+.contacts-title{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16/14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+.contacts-link{
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.contacts-icon{
+  fill:#fff;
 }
 /* portfolio  */
 
